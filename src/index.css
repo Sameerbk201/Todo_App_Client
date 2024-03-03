@@ -1,0 +1,89 @@
+/* styles.css */
+.todo-list {
+  margin-bottom: 20px;
+}
+
+.todo-list h2 {
+  margin-bottom: 10px;
+}
+
+.todo-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list li span {
+  flex-grow: 1;
+}
+
+.todo-list li .actions button {
+  margin-left: 10px;
+}
+
+.add-todo-form {
+  margin-bottom: 20px;
+}
+
+.add-todo-form h2 {
+  margin-bottom: 10px;
+}
+
+.add-todo-form form input {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.add-todo-form form button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-todo-form form button:hover {
+  background-color: #0056b3;
+}
+
+.update-todo-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-todo-modal h2 {
+  margin-bottom: 10px;
+}
+
+.update-todo-modal form input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-buttons button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal-buttons button:hover {
+  background-color: #0056b3;
+}
