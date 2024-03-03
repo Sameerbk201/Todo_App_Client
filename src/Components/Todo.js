@@ -4,7 +4,7 @@ import UpdateTodoModal from "./UpdateTodoModal";
 import AddTodoForm from "./AddTodoForm";
 
 const Todo = () => {
-  const baseUrl = "http://localhost:5000"; // Update this with your actual IP and port
+  const baseUrl = "http://192.168.50.248:5000"; // Update this with your actual IP and port
 
   const [todos, setTodos] = useState([]);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
