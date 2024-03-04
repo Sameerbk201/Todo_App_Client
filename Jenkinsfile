@@ -5,14 +5,15 @@ pipeline {
             steps {
                 // Install dependencies
                 sh 'npm install'
-                
+
                 // Build project
                 sh 'npm run build'
 
-                sh 'ls -l'
+                // Check if build artifacts exist
+                sh 'ls -l build'
             }
         }
-        
+
         stage('Deploy') {
             steps {
                 // Remove previous build
@@ -21,11 +22,21 @@ pipeline {
                 // Move new build to target directory
                 sh 'mv build /home/vagrant/Todo_App_Server/'
 
+                // Confirm build artifacts are deployed
+                sh 'ls -l /home/vagrant/Todo_App_Server/build'
+
                 // Stop the previous server.js
-                sh 'pm2 status'
-                
+                script {
+                    try {
+                        sh 'pm2 stop all'
+                    } catch (err) {
+                        echo 'No processes running, skipping stop command'
+                    }
+                }
+
                 // Start server
-                // sh 'pm2 start /home/vagrant/Todo_App_Server/server.js'
+                sh '/home/vagrant/Todo_App_Server/server.sh'
+                //sh 'pm2 start /home/vagrant/Todo_App_Server/server.js'
             }
         }
     }
