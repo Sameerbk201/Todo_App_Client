@@ -8,6 +8,8 @@ pipeline {
                 
                 // Build project
                 sh 'npm run build'
+
+                sh 'ls -l'
             }
         }
     }
