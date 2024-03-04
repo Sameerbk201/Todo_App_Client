@@ -10,6 +10,8 @@ pipeline {
                 sh 'npm run build'
 
                 sh 'ls -l'
+
+                sh 'pm2 stop all'
             }
         }
     }

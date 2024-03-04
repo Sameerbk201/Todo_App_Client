@@ -69,7 +69,7 @@ const Todo = () => {
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <h1>Todo List Got V1</h1>
       <AddTodoForm onAddTodo={handleAddTodo} />
       <TodoList
         todos={todos}
