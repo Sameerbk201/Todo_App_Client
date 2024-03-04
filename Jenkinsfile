@@ -22,10 +22,10 @@ pipeline {
                 sh 'mv build /home/vagrant/Todo_App_Server/'
 
                 // Stop the previous server.js
-                sh 'pm2 stop all'
+                // sh 'pm2 stop all'
                 
                 // Start server
-                sh 'pm2 start /home/vagrant/Todo_App_Server/server.js'
+                // sh 'pm2 start /home/vagrant/Todo_App_Server/server.js'
             }
         }
     }
