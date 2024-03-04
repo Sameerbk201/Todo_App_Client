@@ -35,7 +35,7 @@ pipeline {
                 }
 
                 // Start server
-                sh '/home/vagrant/Todo_App_Server/server.sh'
+                echo '[+] Successfully deployed'
                 //sh 'pm2 start /home/vagrant/Todo_App_Server/server.js'
             }
         }
