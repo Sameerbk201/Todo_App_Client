@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    stages {
+        stage('Fetch Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Sameerbk201/Todo_App_Client.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    try {
+                        sh 'npm i'
+                        // sh 'npm run build'
+                    } catch (err) {
+                        echo 'npm --version error'
+                        currentBuild.result = 'FAILURE'
+                        error(err)
+                    }
+                }
+            }
+
+            post {
+                success {
+                    echo 'Success'
+                }
+                failure {
+                    echo 'Build failed'
+                }
+            }
+        }
+    }
+}

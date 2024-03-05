@@ -4,7 +4,7 @@ import UpdateTodoModal from "./UpdateTodoModal";
 import AddTodoForm from "./AddTodoForm";
 
 const Todo = () => {
-  const baseUrl = "http://192.168.50.111:5000"; // Update this with your actual IP and port
+  const baseUrl = "http://192.168.50.246:5000"; // Update this with your actual IP and port
 
   const [todos, setTodos] = useState([]);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -69,7 +69,7 @@ const Todo = () => {
 
   return (
     <div>
-      <h1>Todo List Got V1.0.3</h1>
+      <h1>Todo List Got V1.0.4</h1>
       <AddTodoForm onAddTodo={handleAddTodo} />
       <TodoList
         todos={todos}
